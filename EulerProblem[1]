@@ -1,0 +1,18 @@
+#include <iostream>
+void aliases(int);
+int main() {
+  int n= 0;
+  std::cin>>n;
+  aliases(n);
+}
+void aliases(int n)
+{
+  int res = 0;
+  for(int i = 1; i< n; i++)
+  {
+    if(i%3 == 0 || i%5 == 0)
+      res += i;
+  }
+  if(res == 0) std::cout<<"Unknown"<<std::endl;
+  else std::cout<<"The sum of numbers divisible by 3 or 5 is: "<< res;
+}
